@@ -29,6 +29,8 @@ sed -i -e "s/average =  event_norm/!average =  event_norm/" BFF_ZprimeToTauTau_M
 sh gridpack_generation.sh BFF_ZprimeToTauTau_M${MASS} BFF_ZprimeToTauTau_M${MASS}_InputCards/ local ALL
 
 mkdir -p prod
+mkdir -p tarballs
 mv BFF_ZprimeToTauTau_M${MASS}_InputCards prod
 mv BFF_ZprimeToTauTau_M${MASS} prod
 mv BFF_ZprimeToTauTau_M${MASS}.log prod/BFF_ZprimeToTauTau_M${MASS}
+mv BFF_ZprimeToTauTau_M${MASS}*tarball.tar.xz tarballs
