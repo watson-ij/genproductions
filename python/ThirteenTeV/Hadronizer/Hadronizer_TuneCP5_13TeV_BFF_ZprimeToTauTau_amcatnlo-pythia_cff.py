@@ -1,14 +1,3 @@
-import FWCore.ParameterSet.Config as cms
-externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
-    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.4.2/ZprimeToMuMu/ZprimeToMuMu_M_200_mg242new_slc6_amd64_gcc481_CMSSW_7_1_30_tarball.tar.xz'),
-    nEvents = cms.untracked.uint32(5000),
-    numberOfParameters = cms.uint32(1),
-    outputFile = cms.string('cmsgrid_final.lhe'),
-    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
-)
-# Link to cards:
-# https://github.com/watson-ij/genproductions/tree/39c8a63631613f24787f2a56d21c0c637479ef9f/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/BFF_ZprimeToTauTau
-
 import FWCore.ParameterSet.Config as cms 
 
 from Configuration.Generator.Pythia8CommonSettings_cfi import * 
